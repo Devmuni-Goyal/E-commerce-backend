@@ -1,5 +1,5 @@
-import {cors} from 'cors';
-app.use(cors());
+import cors from 'cors';
+
 import {connectDB} from './database/index.js'
 // const express = require('express');
 import User from './Schema/user.js';
@@ -9,6 +9,7 @@ import Subcategory from './Schema/subcategory.js';
 import express from 'express';
 const app = express();
 const PORT = 3000;
+app.use(cors());
 app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello from Node backend!');
