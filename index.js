@@ -1,3 +1,5 @@
+import {cors} from 'cors';
+app.use(cors());
 import {connectDB} from './database/index.js'
 // const express = require('express');
 import User from './Schema/user.js';
